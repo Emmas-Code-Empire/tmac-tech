@@ -11,12 +11,12 @@ Follow these steps to get the app running and start stacking those "daboons."
 Before running anything, make sure you have the most recent updates.
 
 - **Action:** Open your terminal.
-- **Command:** ```bash
+- **Command:**
+
+```bash
   git pull
 
-  ```
-
-  ```
+```
 
 ---
 
@@ -25,9 +25,11 @@ Before running anything, make sure you have the most recent updates.
 Now, let's get the local server started.
 
 1.  In the terminal, type:
-    ```bash
-    npm run dev
-    ```
+
+```bash
+npm run dev
+```
+
 2.  Once it's running, open your web browser and navigate to:
     [http://127.0.0.1:3000](http://127.0.0.1:3000)
 
@@ -36,3 +38,7 @@ Now, let's get the local server started.
 ### 💰 Step 3: Get to Work
 
 Use the application to go make some **gosh darn daboons!**
+
+```
+
+```
