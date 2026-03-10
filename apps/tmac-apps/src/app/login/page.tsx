@@ -5,17 +5,24 @@ import { useEffect, useState } from "react";
 import { Session } from "next-auth";
 import { signIn, signOut } from "next-auth/react";
 import { auth_GetSession } from "@/actions/authActions";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const [session, setSession] = useState<Session | null>(null);
 
+  const router = useRouter();
+
   useEffect(() => {
     const getAndSetSession = async () => {
-      const session = await auth_GetSession();
-      setSession(session);
+      if (!session) {
+        const session = await auth_GetSession();
+        setSession(session);
+      } else {
+        router.push("/");
+      }
     };
     getAndSetSession();
-  }, []);
+  }, [session]);
 
   return (
     <div className={styles.pageContainer}>
