@@ -38,7 +38,3 @@ npm run dev
 ### 💰 Step 3: Get to Work
 
 Use the application to go make some **gosh darn daboons!**
-
-```
-
-```
