@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { Session } from "next-auth";
 import { signIn, signOut } from "next-auth/react";
 import { auth_GetSession } from "@/actions/authActions";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [session, setSession] = useState<Session | null>(null);
