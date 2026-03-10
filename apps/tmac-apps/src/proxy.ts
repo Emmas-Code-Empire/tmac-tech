@@ -23,7 +23,7 @@ export async function proxy(request: NextRequest) {
 
   const user = session.user;
 
-  if (user.email !== "cmml97xhz000004ic71vsx7i2")
+  if (user.id !== "cmml97xhz000004ic71vsx7i2")
     return NextResponse.redirect(
       errorUrl("Only emma is allowed to use this app. Go away.")
     );
