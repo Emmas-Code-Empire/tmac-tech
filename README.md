@@ -2,7 +2,7 @@
 
 ### Instructions for Emma (My Dearest Darling)
 
-Follow these steps to get the app running and start stacking those "daboons."
+Follow these steps to get the app running and start stacking those daboons.
 
 ---
 
