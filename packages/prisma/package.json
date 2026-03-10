@@ -1,0 +1,29 @@
+{
+  "name": "@repo/prisma",
+  "version": "1.0.0",
+  "private": true,
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit",
+    "build": "prisma generate"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/node": "^22.15.3",
+    "eslint": "^9",
+    "prisma": "^7.4.2",
+    "typescript": "5.9.2"
+  },
+  "dependencies": {
+    "@prisma/adapter-neon": "^7.4.1",
+    "@prisma/client": "^7.4.1",
+    "dotenv": "^16.0.3"
+  }
+}
