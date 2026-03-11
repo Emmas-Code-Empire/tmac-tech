@@ -1,6 +1,5 @@
 "use client";
 
-import { signOut } from "@/auth";
 import { useSearchParams } from "next/navigation";
 
 const Page = () => {
@@ -12,13 +11,6 @@ const Page = () => {
     <div>
       <p>ERROR:</p>
       <p>{error && error}</p>
-      <button
-        onClick={async () => {
-          signOut();
-        }}
-      >
-        Sign Out
-      </button>
     </div>
   );
 };
