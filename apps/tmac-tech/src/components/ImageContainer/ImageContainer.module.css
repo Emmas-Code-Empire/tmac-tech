@@ -1,0 +1,7 @@
+.imageContainer {
+  position: relative;
+}
+
+.imageContainer > * {
+  transition: opacity var(--animationTimeSlow);
+}
