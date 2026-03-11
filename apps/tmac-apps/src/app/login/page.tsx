@@ -10,19 +10,13 @@ import { useRouter } from "next/navigation";
 export default function Home() {
   const [session, setSession] = useState<Session | null>(null);
 
-  const router = useRouter();
-
   useEffect(() => {
     const getAndSetSession = async () => {
-      if (!session) {
-        const session = await auth_GetSession();
-        setSession(session);
-      } else {
-        router.push("/");
-      }
+      const session = await auth_GetSession();
+      setSession(session);
     };
     getAndSetSession();
-  }, [session]);
+  }, []);
 
   return (
     <div className={styles.pageContainer}>
