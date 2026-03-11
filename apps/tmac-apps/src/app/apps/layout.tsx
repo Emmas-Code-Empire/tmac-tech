@@ -10,7 +10,7 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   const logoConfig: ImageContainerConfig = {
-    src: "/images/tmac-logo.png",
+    src: "/tmac-logo.png",
     aspectRatio: "500/140",
     alt: "Logo",
   };

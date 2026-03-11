@@ -8,7 +8,13 @@ export async function proxy(request: NextRequest) {
   const loginUrl = new URL("/login", request.url);
   const errorUrl = (msg: string) => new URL(`/error?e=${msg}`, request.url);
 
-  if (pathname.startsWith("/login") || pathname.startsWith("/error")) {
+  if (
+    pathname.startsWith("/_next") ||
+    pathname.includes("/api/") ||
+    pathname.includes(".") ||
+    pathname.startsWith("/login") ||
+    pathname.startsWith("/error")
+  ) {
     return NextResponse.next();
   }
 
@@ -30,6 +36,7 @@ export async function proxy(request: NextRequest) {
     );
 
   return NextResponse.rewrite(appUrl);
+  return NextResponse.next();
 }
 
 export const config = {
