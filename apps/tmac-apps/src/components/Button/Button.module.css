@@ -1,0 +1,74 @@
+.buttonContainer {
+  position: relative;
+  --height: 30px;
+  width: 100%;
+}
+
+.button {
+  position: relative;
+  border: none;
+  outline: none;
+  border-radius: var(--buttonRadius);
+  padding: var(--buttonPadding);
+  transition: all var(--animationTime);
+  cursor: pointer;
+  height: var(--height);
+  width: 100%;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--siblingElementSpacing);
+  width: 100%;
+  height: 100%;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text,
+.loading {
+  transition: all var(--animationTime);
+}
+
+.button:hover {
+  filter: brightness(95%);
+}
+
+.hitbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--height);
+  z-index: 2;
+  border-radius: var(--buttonRadius);
+  cursor: pointer;
+  background-color: transparent;
+  transition: all var(--animationTime);
+  border: 1px solid transparent;
+}
+
+.hitbox:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.label {
+  position: absolute;
+  top: 110%;
+  z-index: 1;
+  background-color: var(--bw100);
+  border: 1px solid var(--bw300);
+  box-shadow: var(--elementShadowBg);
+  padding: var(--buttonPadding);
+  border-radius: var(--elementRadius);
+  transition: all var(--animationTime);
+  cursor: default;
+  width: max-content;
+}

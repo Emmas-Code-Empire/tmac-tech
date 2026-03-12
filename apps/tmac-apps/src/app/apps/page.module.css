@@ -1,0 +1,90 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--interElementSpacing);
+  height: 100%;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100%;
+  gap: var(--outerElementSpacing);
+}
+
+/* --- Light Theme Code Block Styles --- */
+.codeContainer {
+  position: relative;
+  width: 100%;
+  border-radius: var(--elementRadius);
+  background-color: #f6f8fa; /* Soft light grey background */
+  border: 1px solid #d0d7de; /* Subtle grey border */
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Softer, lighter shadow */
+}
+
+.copyButton {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: #ffffff; /* White button */
+  color: #24292f; /* Dark text */
+  border: none;
+  border-bottom: 1px solid var(--bw300);
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.copyButton:hover {
+  background-color: #f3f4f6; /* Slight grey on hover */
+  border-color: #8c959f;
+}
+
+.copyButton.copied {
+  background-color: #2da44e; /* Bright success green */
+  border-color: #2da44e;
+  color: white;
+}
+
+.codeBox {
+  width: 100%;
+  height: 350px; /* Good default height */
+  background-color: transparent;
+  color: #24292f; /* Dark grey code text for readability */
+  font-family: "Consolas", "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding: 48px 16px 16px 16px; /* High top padding to clear the button */
+  border: none;
+  resize: vertical; /* Let user drag height up/down */
+  outline: none;
+  white-space: pre; /* Keeps code formatting perfect */
+}
+
+/* Custom Webkit Scrollbar for the textarea (Light Theme) */
+.codeBox::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.codeBox::-webkit-scrollbar-track {
+  background: #f6f8fa; /* Matches container background */
+}
+
+.codeBox::-webkit-scrollbar-thumb {
+  background: #c2c8ce; /* Soft grey thumb */
+  border-radius: 5px;
+  border: 2px solid #f6f8fa; /* Gives it a padded look */
+}
+
+.codeBox::-webkit-scrollbar-thumb:hover {
+  background: #9fa6ad; /* Slightly darker grey on hover */
+}

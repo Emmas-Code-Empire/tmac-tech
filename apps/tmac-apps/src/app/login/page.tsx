@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import { Session } from "next-auth";
 import { signIn, signOut } from "next-auth/react";
-import { auth_GetSession } from "@/actions/authActions";
+import { auth_GetSession } from "@/actions/auth.actions";
 import { useRouter } from "next/navigation";
 
 export default function Home() {

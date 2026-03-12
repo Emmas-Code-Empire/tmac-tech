@@ -49,8 +49,8 @@
 
   /* Typography - H1 */
   --h1-font: var(--oswald);
-  --h1-weight: initial;
-  --h1-size: initial;
+  --h1-weight: 600;
+  --h1-size: 25px;
   --h1-lineHeight: initial;
 
   /* Typography - H2 */

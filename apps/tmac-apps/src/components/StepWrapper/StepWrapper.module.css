@@ -1,0 +1,46 @@
+.stepWrapper {
+  border: 1px solid var(--bw300);
+  padding: var(--sectionPadding);
+  border-radius: var(--elementRadius);
+  box-shadow: var(--elementShadowBg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--interElementSpacing);
+  transition: all var(--animationTime);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: var(--siblingElementSpacing);
+}
+
+.heading > div {
+  height: 25px;
+  aspect-ratio: 1/1;
+  background-color: var(--bw200);
+  border-radius: 50%;
+  border: 1px solid var(--bw300);
+  display: grid;
+  place-items: center;
+  box-shadow: var(--elementShadowBg);
+}
+
+.text {
+  font-weight: 600;
+  font-size: var(--pl-size);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--interElementSpacing);
+}
+
+.body > * {
+  width: 100% !important;
+}
+
+.body > * > * {
+  width: 100% !important;
+}
