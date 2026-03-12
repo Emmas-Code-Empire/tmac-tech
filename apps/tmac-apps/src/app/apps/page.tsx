@@ -154,10 +154,8 @@ export default function LinkedInEmailScraper() {
 
       await execute(validatedData, sheetId, pageName);
 
-      window.open(
-        `https://docs.google.com/spreadsheets/d/${sheetId}`,
-        "_blank",
-        "noopener,noreferrer"
+      alert(
+        "Success! This will now longer redirect you. Per your request. emma..."
       );
     },
   };
