@@ -153,7 +153,12 @@ export default function LinkedInEmailScraper() {
       const validatedData = Zod.scrapedProfileArray.parse(JSON.parse(data));
 
       await execute(validatedData, sheetId, pageName);
-      router.push(`https://docs.google.com/spreadsheets/d/${sheetId}`);
+
+      window.open(
+        `https://docs.google.com/spreadsheets/d/${sheetId}`,
+        "_blank",
+        "noopener,noreferrer"
+      );
     },
   };
 
