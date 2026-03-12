@@ -12,6 +12,7 @@ import generateScrapingCode from "@/utils/generateScrapingCode.util";
 import useLazyServerAction from "@/hooks/useLazyServerAction.hook";
 import { SaveLinkedInContacts } from "@/actions/sheets.actions";
 import Zod from "@/lib/zod/zod.schemas";
+import { useRouter } from "next/navigation";
 
 export default function LinkedInEmailScraper() {
   const [activeStep, setActiveStep] = useState(0);
@@ -131,13 +132,15 @@ export default function LinkedInEmailScraper() {
     ref: pageNameRef,
   };
 
+  const router = useRouter();
+
   const uploadToSheetButton: ButtonConfig = {
     style: primaryButtonStyleConfig,
     ariaLabel: "Upload to Google Sheet",
     text: "Upload to Google Sheet",
     loading,
     disabled: loading,
-    onClick: () => {
+    onClick: async () => {
       const data = dataRef.current?.value;
       const sheetId = sheetIdRef.current?.value;
       const pageName = pageNameRef.current?.value;
@@ -149,7 +152,8 @@ export default function LinkedInEmailScraper() {
 
       const validatedData = Zod.scrapedProfileArray.parse(JSON.parse(data));
 
-      execute(validatedData, sheetId, pageName);
+      await execute(validatedData, sheetId, pageName);
+      router.push(`https://docs.google.com/spreadsheets/d/${sheetId}`);
     },
   };
 
